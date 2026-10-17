@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://dialogueadv2"]
+
+[ext_resource type="Script" path="res://scripts/dialogue_data.gd" id="1_dial"]
+
+[resource]
+script = ExtResource("1_dial")
+speaker_name = "Garrett"
+text = "Navaria's the last proper town before the wilds. Every adventurer worth their salt stops here. Run your shop well, friend, and you'll never want for customers — or stories."
+set_flag = "adventurer_spoken"

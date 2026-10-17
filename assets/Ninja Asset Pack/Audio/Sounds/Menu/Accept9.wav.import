@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bk630clstilei"
+path="res://.godot/imported/Accept9.wav-0361ff4883df6e205ef0237fee0e5f4a.sample"
+
+[deps]
+
+source_file="res://assets/Ninja Asset Pack/Audio/Sounds/Menu/Accept9.wav"
+dest_files=["res://.godot/imported/Accept9.wav-0361ff4883df6e205ef0237fee0e5f4a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

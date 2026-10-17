@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLineData" load_steps=2 format=3 uid="uid://dialoguegreet1"]
+
+[ext_resource type="Script" path="res://scripts/dialogue_data.gd" id="1_dial"]
+
+[resource]
+script = ExtResource("1_dial")
+speaker_name = "Mira"
+text = "Oh! A new face in Navaria! Welcome, welcome! What brings you all the way out here, traveler?"
+next_id = "greet_2"

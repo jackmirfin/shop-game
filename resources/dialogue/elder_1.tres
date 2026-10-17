@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLineData" load_steps=2 format=3 uid="uid://dialogueelder1"]
+
+[ext_resource type="Script" path="res://scripts/dialogue_data.gd" id="1_dial"]
+
+[resource]
+script = ExtResource("1_dial")
+speaker_name = "Old Thomas"
+text = "Well now... you have Eldric's look about you. I'd recognize those eyes anywhere. He was my best friend for forty years."
+next_id = "elder_2"

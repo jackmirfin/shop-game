@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" uid="uid://spider001" path="res://scenes/enemies/spider.tscn" id="1_base"]
+[ext_resource type="Script" path="res://scripts/enemies/world_enemy.gd" id="2_world"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_encounter"]
+radius = 64.0
+
+[node name="Spider" instance=ExtResource("1_base")]
+script = ExtResource("2_world")
+collision_mask = 1
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+texture_filter = 1
+
+[node name="CollisionShape2D" parent="Sight"]
+disabled = true
+
+[node name="EncounterTrigger" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EncounterTrigger"]
+shape = SubResource("CircleShape2D_encounter")

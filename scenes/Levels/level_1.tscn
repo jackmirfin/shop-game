@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d3v31k1lixtm2"]
+
+[ext_resource type="PackedScene" uid="uid://crwour1q463dk" path="res://scenes/Levels/base_level.tscn" id="1_base"]
+[ext_resource type="PackedScene" uid="uid://chgu6obu5lw8c" path="res://scenes/player.tscn" id="2_player"]
+
+[node name="LevelRoot2" unique_id=2016963716 instance=ExtResource("1_base")]
+
+[node name="Player" parent="YSort" unique_id=183292890 instance=ExtResource("2_player")]
+position = Vector2(635, -138)

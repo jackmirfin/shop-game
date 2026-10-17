@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cvh1l8iud0sqf"]
+
+[ext_resource type="PackedScene" uid="uid://b08ni8urphybl" path="res://scenes/Navaria.tscn" id="1_navaria"]
+[ext_resource type="Script" uid="uid://bfrn2yco05t6w" path="res://scripts/main.gd" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://chgu6obu5lw8c" path="res://scenes/player.tscn" id="2_player"]
+
+[node name="Main" type="Node2D" unique_id=764945578]
+y_sort_enabled = true
+script = ExtResource("1_yqjtg")
+
+[node name="LevelRoot" parent="." unique_id=1615519651 instance=ExtResource("1_navaria")]
+
+[node name="Player" parent="." unique_id=69446855 instance=ExtResource("2_player")]
+position = Vector2(32, 108)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://dialogueelder2"]
+
+[ext_resource type="Script" path="res://scripts/dialogue_data.gd" id="1_dial"]
+
+[resource]
+script = ExtResource("1_dial")
+speaker_name = "Old Thomas"
+text = "He spoke of you often. Said you had the adventuring spirit. I'm glad you've come. The Emporium hasn't been the same without him. If you ever want to hear stories about his younger days, you know where to find me."
+set_flag = "elder_spoken"

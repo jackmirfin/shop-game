@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLineData" load_steps=2 format=3 uid="uid://dialoguegreet4"]
+
+[ext_resource type="Script" path="res://scripts/dialogue_data.gd" id="1_dial"]
+
+[resource]
+script = ExtResource("1_dial")
+speaker_name = "Mira"
+text = "Go on now — your shop is waiting. And don't be a stranger! My bakery is two doors down. First loaf is on the house!"
+set_flag = "greeter_spoken"

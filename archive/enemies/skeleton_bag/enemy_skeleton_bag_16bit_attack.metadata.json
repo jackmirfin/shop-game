@@ -1,0 +1,58 @@
+{
+	"animation_name": "attack",
+	"animation_style": "",
+	"animation_type": "attack",
+	"columns": 3,
+	"directions": [],
+	"frame_count": 6,
+	"frame_height": 48,
+	"frame_paths": [],
+	"frame_regions": [
+		{
+			"h": 48,
+			"w": 32,
+			"x": 0,
+			"y": 0
+		},
+		{
+			"h": 48,
+			"w": 32,
+			"x": 32,
+			"y": 0
+		},
+		{
+			"h": 48,
+			"w": 32,
+			"x": 64,
+			"y": 0
+		},
+		{
+			"h": 48,
+			"w": 32,
+			"x": 0,
+			"y": 48
+		},
+		{
+			"h": 48,
+			"w": 32,
+			"x": 32,
+			"y": 48
+		},
+		{
+			"h": 48,
+			"w": 32,
+			"x": 64,
+			"y": 48
+		}
+	],
+	"frame_width": 32,
+	"name": "enemy_skeleton_bag_16bit_attack",
+	"prompt": "animate sprite",
+	"rows": 2,
+	"source_image": "res://assets/generated/enemy_skeleton_bag_16bit_frame_0.png",
+	"source_tool": "animate_sprite",
+	"spritesheet_height": 96,
+	"spritesheet_path": "res://assets/generated/enemy_skeleton_bag_16bit_attack.png",
+	"spritesheet_width": 96,
+	"type": "animation"
+}

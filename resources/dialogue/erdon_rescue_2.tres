@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLineData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/dialogue_data.gd" id="1_dialogue"]
+
+[resource]
+script = ExtResource("1_dialogue")
+speaker_name = "ERDON"
+text = "The name's Erdon."
+next_id = "erdon_rescue_3"

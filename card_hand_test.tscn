@@ -1,0 +1,105 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/card_hand_test.gd" id="1_test"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_play"]
+bg_color = Color(0.2, 0.45, 0.3, 0.22)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.45, 1, 0.55, 0.9)
+
+[node name="CardHandTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_test")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11, 0.11, 0.15, 1)
+
+[node name="CountsLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 14.0
+offset_right = 680.0
+offset_bottom = 44.0
+theme_override_font_sizes/font_size = 20
+text = "Draw: 0    Hand: 0    Discard: 0"
+
+[node name="EnergyLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 46.0
+offset_right = 340.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 20
+text = "Energy: 0 / 0"
+
+[node name="FeedbackLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 78.0
+offset_right = 720.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(1, 0.62, 0.35, 1)
+theme_override_font_sizes/font_size = 16
+text = ""
+
+[node name="EndTurnButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 112.0
+offset_right = 152.0
+offset_bottom = 150.0
+text = "End Turn"
+
+[node name="PlayArea" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 140.0
+offset_right = 1130.0
+offset_bottom = 250.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_play")
+
+[node name="PlayAreaLabel" type="Label" parent="PlayArea"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.85, 1, 0.88, 1)
+theme_override_font_sizes/font_size = 22
+text = "PLAY AREA  —  drag a card here, or press its number"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NoteLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 686.0
+offset_right = 1256.0
+offset_bottom = 712.0
+theme_override_colors/font_color = Color(0.7, 0.7, 0.76, 1)
+theme_override_font_sizes/font_size = 14
+text = "Prototype only: played cards go to the discard pile. Throw Stone's Consume and all card effects are not implemented yet."
+
+[node name="HandContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 300.0
+offset_right = 1150.0
+offset_bottom = 594.0

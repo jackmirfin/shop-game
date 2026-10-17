@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/hit_effect.gd" id="1_hit_effect"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hit"]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"impact",
+"speed": 1.0
+}]
+
+[node name="HitEffect" type="Node2D"]
+texture_filter = 1
+z_index = 0
+script = ExtResource("1_hit_effect")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+centered = true
+sprite_frames = SubResource("SpriteFrames_hit")
+animation = &"impact"

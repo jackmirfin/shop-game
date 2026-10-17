@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://bagitem001"]
+
+[ext_resource type="Script" uid="uid://dyusjfynssuuj" path="res://scripts/item_data.gd" id="1_bag"]
+
+[resource]
+script = ExtResource("1_bag")
+item_name = "Adventurer's Bag"
+description = "A worn leather satchel. Unlocks your inventory and marks you as a true adventurer."
+item_type = 6
+value = 0
+stackable = false
+max_stack = 1
+unique_id = "adventurers_bag"

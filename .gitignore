@@ -1,0 +1,9 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Local Ziva editor tooling is not part of the game source.
+/addons/ziva_agent/
+
+# Local project settings backup.
+/project.godot.bak

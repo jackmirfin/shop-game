@@ -1,0 +1,119 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/npcs/world_npc.gd" id="1_blacksmith"]
+[ext_resource type="Texture2D" path="res://assets/Characters/NPCs/gingerman.png" id="2_blacksmith"]
+
+[sub_resource type="AtlasTexture" id="a0"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(0, 0, 17, 25)
+[sub_resource type="AtlasTexture" id="a1"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(17, 0, 17, 25)
+[sub_resource type="AtlasTexture" id="a2"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(34, 0, 17, 25)
+[sub_resource type="AtlasTexture" id="a3"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(51, 0, 17, 25)
+[sub_resource type="AtlasTexture" id="b0"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(0, 25, 17, 25)
+[sub_resource type="AtlasTexture" id="b1"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(17, 25, 17, 25)
+[sub_resource type="AtlasTexture" id="b2"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(34, 25, 17, 25)
+[sub_resource type="AtlasTexture" id="b3"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(51, 25, 17, 25)
+[sub_resource type="AtlasTexture" id="c0"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(0, 50, 17, 25)
+[sub_resource type="AtlasTexture" id="c1"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(17, 50, 17, 25)
+[sub_resource type="AtlasTexture" id="c2"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(34, 50, 17, 25)
+[sub_resource type="AtlasTexture" id="c3"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(51, 50, 17, 25)
+[sub_resource type="AtlasTexture" id="d0"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(0, 75, 17, 25)
+[sub_resource type="AtlasTexture" id="d1"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(17, 75, 17, 25)
+[sub_resource type="AtlasTexture" id="d2"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(34, 75, 17, 25)
+[sub_resource type="AtlasTexture" id="d3"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(51, 75, 17, 25)
+[sub_resource type="AtlasTexture" id="e0"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(0, 100, 17, 25)
+[sub_resource type="AtlasTexture" id="e1"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(17, 100, 17, 25)
+[sub_resource type="AtlasTexture" id="e2"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(34, 100, 17, 25)
+[sub_resource type="AtlasTexture" id="e3"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(51, 100, 17, 25)
+[sub_resource type="AtlasTexture" id="f0"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(0, 125, 17, 25)
+[sub_resource type="AtlasTexture" id="f1"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(17, 125, 17, 25)
+[sub_resource type="AtlasTexture" id="f2"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(34, 125, 17, 25)
+[sub_resource type="AtlasTexture" id="f3"]
+atlas = ExtResource("2_blacksmith")
+region = Rect2(51, 125, 17, 25)
+
+[sub_resource type="SpriteFrames" id="frames"]
+animations = [{
+"frames": [{"duration": 1.0, "texture": SubResource("a0")}, {"duration": 1.0, "texture": SubResource("a1")}, {"duration": 1.0, "texture": SubResource("a2")}, {"duration": 1.0, "texture": SubResource("a3")}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{"duration": 1.0, "texture": SubResource("b0")}, {"duration": 1.0, "texture": SubResource("b1")}, {"duration": 1.0, "texture": SubResource("b2")}, {"duration": 1.0, "texture": SubResource("b3")}],
+"loop": true,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{"duration": 1.0, "texture": SubResource("c0")}, {"duration": 1.0, "texture": SubResource("c1")}, {"duration": 1.0, "texture": SubResource("c2")}, {"duration": 1.0, "texture": SubResource("c3")}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{"duration": 1.0, "texture": SubResource("d0")}, {"duration": 1.0, "texture": SubResource("d1")}, {"duration": 1.0, "texture": SubResource("d2")}, {"duration": 1.0, "texture": SubResource("d3")}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}, {
+"frames": [{"duration": 1.0, "texture": SubResource("e0")}, {"duration": 1.0, "texture": SubResource("e1")}, {"duration": 1.0, "texture": SubResource("e2")}, {"duration": 1.0, "texture": SubResource("e3")}],
+"loop": true,
+"name": &"walk_right",
+"speed": 10.0
+}, {
+"frames": [{"duration": 1.0, "texture": SubResource("f0")}, {"duration": 1.0, "texture": SubResource("f1")}, {"duration": 1.0, "texture": SubResource("f2")}, {"duration": 1.0, "texture": SubResource("f3")}],
+"loop": true,
+"name": &"walk_up",
+"speed": 10.0
+}]
+
+[node name="Blacksmith" type="CharacterBody2D"]
+script = ExtResource("1_blacksmith")
+initial_facing = "up"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("frames")
+animation = &"idle"

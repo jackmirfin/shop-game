@@ -1,0 +1,236 @@
+[gd_scene format=3 uid="uid://cyruw2012ncje"]
+
+[ext_resource type="Script" uid="uid://bdvn7uw36u7d1" path="res://scripts/combat_test.gd" id="1_combat"]
+[ext_resource type="Texture2D" uid="uid://boiceks5l3ucx" path="res://assets/Combat/ForestFight.png" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://dl2x3vx4yabhh" path="res://assets/Combat/SpiderLarge.png" id="3_enemy"]
+[ext_resource type="Texture2D" uid="uid://vhjo0n6g08ak" path="res://assets/Combat/AttackIntent.png" id="4_intent"]
+[ext_resource type="Texture2D" uid="uid://c4qgqf12ugro" path="res://assets/Combat/DrawPile.png" id="5_draw"]
+[ext_resource type="Texture2D" uid="uid://dw6tkgkpwc1io" path="res://assets/Combat/DiscardPile.png" id="6_discard"]
+[ext_resource type="Texture2D" uid="uid://cudpe3vv04v6n" path="res://assets/Combat/EndTurnButton.png" id="7_endturn"]
+[ext_resource type="Texture2D" path="res://assets/Combat/EnergyIcon.png" id="8_energy"]
+[ext_resource type="Texture2D" path="res://assets/Combat/player_back.png" id="9_playerback"]
+[ext_resource type="Texture2D" path="res://assets/Combat/TurnCount.png" id="10_turncount"]
+
+[node name="CombatTest" type="Control" unique_id=1917577004]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_combat")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1652305460]
+texture_filter = 1
+modulate = Color(0.88, 0.88, 0.88, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_bg")
+
+[node name="PlayArea" type="Control" parent="." unique_id=271911003]
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 510.0
+mouse_filter = 2
+
+[node name="PlayerBack" type="AnimatedSprite2D" parent="." unique_id=700184359]
+texture_filter = 1
+position = Vector2(385, 670)
+scale = Vector2(18, 18)
+
+[node name="Enemy" type="AnimatedSprite2D" parent="." unique_id=700184358]
+texture_filter = 1
+position = Vector2(828, 460)
+scale = Vector2(8.4, 8.4)
+
+[node name="AttackIntent" type="Sprite2D" parent="." unique_id=459754449]
+texture_filter = 1
+position = Vector2(967, 304)
+scale = Vector2(4, 4)
+texture = ExtResource("4_intent")
+
+[node name="IntentLabel" type="Label" parent="." unique_id=29684082]
+layout_mode = 0
+offset_left = 907.0
+offset_top = 274.0
+offset_right = 1027.0
+offset_bottom = 334.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.96, 0.86, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 36
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DrawPileIcon" type="TextureRect" parent="." unique_id=1992853239]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 304.0
+offset_right = 168.0
+offset_bottom = 464.0
+mouse_filter = 2
+texture = ExtResource("5_draw")
+
+[node name="DrawCountLabel" type="Label" parent="." unique_id=458224495]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 357.0
+offset_right = 151.0
+offset_bottom = 417.0
+theme_override_colors/font_color = Color(1, 0.95, 0.8, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 36
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DiscardPileIcon" type="TextureRect" parent="." unique_id=7185111]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1112.0
+offset_top = 304.0
+offset_right = 1272.0
+offset_bottom = 464.0
+mouse_filter = 2
+texture = ExtResource("6_discard")
+
+[node name="DiscardCountLabel" type="Label" parent="." unique_id=488556493]
+layout_mode = 0
+offset_left = 1135.0
+offset_top = 357.0
+offset_right = 1255.0
+offset_bottom = 417.0
+theme_override_colors/font_color = Color(1, 0.95, 0.8, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 36
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnergyIcon" type="TextureRect" parent="." unique_id=301967806]
+texture_filter = 1
+layout_mode = 0
+offset_left = -90.0
+offset_top = 372.0
+offset_right = 358.0
+offset_bottom = 820.0
+mouse_filter = 2
+texture = ExtResource("8_energy")
+
+[node name="EnergyLabel" type="Label" parent="." unique_id=301967805]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 580.0
+offset_right = 190.0
+offset_bottom = 640.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.95, 0.72, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 36
+text = "3/3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TurnCounter" type="TextureRect" parent="." unique_id=700184360]
+texture_filter = 1
+layout_mode = 0
+offset_left = -62.0
+offset_top = -140.0
+offset_right = 322.0
+offset_bottom = 244.0
+mouse_filter = 2
+texture = ExtResource("10_turncount")
+
+[node name="TurnLabel" type="Label" parent="." unique_id=700184361]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 42.0
+offset_right = 219.0
+offset_bottom = 116.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.96, 0.9, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 40
+text = "TURN 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FeedbackLabel" type="Label" parent="." unique_id=1350296431]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 122.0
+offset_right = 660.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(1, 0.68, 0.4, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 16
+
+[node name="EndTurnButton" type="Button" parent="." unique_id=2024370708]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 582.0
+offset_right = 1270.0
+offset_bottom = 690.0
+focus_mode = 0
+flat = true
+
+[node name="EndTurnArt" type="TextureRect" parent="EndTurnButton" unique_id=1164636461]
+texture_filter = 1
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_filter = 2
+texture = ExtResource("7_endturn")
+
+[node name="EffectsLayer" type="Control" parent="." unique_id=700184362]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HandContainer" type="Control" parent="." unique_id=1033840922]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="FrontEffects" type="Control" parent="." unique_id=700184363]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ResultLabel" type="Label" parent="." unique_id=1895840901]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 230.0
+offset_right = 890.0
+offset_bottom = 320.0
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1

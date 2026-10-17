@@ -1,0 +1,272 @@
+class_name WorldNpc
+extends CharacterBody2D
+## An ambient townsperson with a ROUTINE rather than a patrol.
+##
+## It moves between "intents" — places it likes to be, and how long it lingers once it
+## gets there — picking the next one at random every time. So an NPC has habits without
+## ever walking a fixed script: the old lady potters about town and now and then spends a
+## while by the pond, the sternman works between the tavern and the blacksmith, and so on.
+##
+## An intent names a LANDMARK NODE in the level, resolved when it is used, so moving a
+## landmark moves the NPC's habit with it and no coordinates are copied in here. An
+## intent with no landmark is a potter-about: a random spot near where the NPC was placed.
+##
+## Animation names follow the project's standard convention — idle / walk with the
+## "_right" and "_up" variants, left being the right-facing art flipped — so every NPC
+## scene works with this one script and none of them needs overrides.
+
+## Walking pace. Well below the player's, so townsfolk never feel like they are fleeing.
+@export var move_speed: float = 34.0
+## How far ahead it looks. Long enough to notice a tree before it is already against it.
+@export var sight_distance: float = 28.0
+## Headings tried each step, spread either side of the straight line to the target.
+const STEER_STEPS: int = 9
+## How far either side of that straight line they may turn, in degrees.
+const STEER_SPREAD: float = 85.0
+## What counts as "something in the way": the terrain and anything solid on the body
+## layers, which includes the player and other townsfolk. The NPC's own body is
+## excluded from its own ray.
+const VISION_MASK: int = 1 | 2
+## How much a heading is favoured for leading along a village path.
+const PATH_BONUS: float = 0.6
+## The Ground tileset source the village is drawn from.
+const GROUND_SOURCE: int = 0
+## Atlas coordinates in the Ground tileset that make up the village's PATHS, read off
+## the map itself: the dirt road surface (1,4 — the tile the player spawns on) and its
+## edges and junctions. Everything else is grass, hedging or water.
+@export var path_tiles: Array[Vector2i] = [
+	Vector2i(1, 4),
+	Vector2i(2, 1),
+	Vector2i(1, 0),
+	Vector2i(0, 2),
+	Vector2i(1, 2),
+	Vector2i(2, 2),
+	Vector2i(5, 1),
+	Vector2i(6, 1),
+]
+## How close counts as arrived.
+@export var arrive_range: float = 6.0
+## How far a potter-about may stray from where the NPC was placed.
+@export var home_radius: float = 64.0
+## An intent the NPC cannot reach is abandoned after this long, so it never pushes
+## against a wall forever.
+@export var travel_timeout: float = 12.0
+## The routine. Each entry is a Dictionary:
+##   landmark: String  a level node to walk to; "" means potter about near home
+##   weight:   float   relative chance of this being picked next
+##   linger:   float   seconds spent idle after arriving
+##   roam:     float   for a potter-about, how far from home it may wander
+@export var intents: Array = []
+
+var _home: Vector2 = Vector2.ZERO
+var _target: Vector2 = Vector2.ZERO
+var _next_linger: float = 2.0
+var _linger_left: float = 0.0
+var _travel_left: float = 0.0
+var _has_target: bool = false
+## The level's Ground tilemap, so paths can be told from grass. Looked up lazily.
+var _ground: TileMapLayer = null
+var _rng := RandomNumberGenerator.new()
+
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+
+
+func _ready() -> void:
+	add_to_group("npc")
+	# NPC scenes carry no collision of their own, so the body builds it: a small box at
+	# the feet, which makes a townsperson solid to walk into without walling off a street.
+	# Layer 2 against the terrain's layer 1, exactly like the overworld enemies.
+	collision_layer = 2
+	collision_mask = 1
+	if get_node_or_null("CollisionShape2D") == null:
+		var shape := CollisionShape2D.new()
+		shape.name = "CollisionShape2D"
+		var box := RectangleShape2D.new()
+		box.size = Vector2(12.0, 8.0)
+		shape.shape = box
+		shape.position = Vector2(0.0, 6.0)
+		add_child(shape)
+	_home = global_position
+	_rng.randomize()
+	_play_anim(&"idle", true)
+	_pick_intent()
+
+
+func _physics_process(delta: float) -> void:
+	# Lingering where it arrived.
+	if _linger_left > 0.0:
+		_linger_left -= delta
+		velocity = Vector2.ZERO
+		if _linger_left <= 0.0:
+			_pick_intent()
+		return
+	if not _has_target:
+		_pick_intent()
+		return
+	var to: Vector2 = _target - global_position
+	if to.length() <= arrive_range:
+		velocity = Vector2.ZERO
+		_has_target = false
+		_linger_left = _next_linger
+		_play_anim(&"idle", true)
+		return
+	_travel_left -= delta
+	if _travel_left <= 0.0:
+		# Unreachable — something is in the way. Pick something else rather than shoving.
+		_has_target = false
+		return
+	var heading: Vector2 = _choose_heading(to)
+	if heading == Vector2.ZERO:
+		# Boxed in on every side. Try somewhere else rather than grinding against a wall.
+		_has_target = false
+		return
+	velocity = heading * move_speed
+	move_and_slide()
+	_face_where_it_walks(heading)
+
+
+# --- Choosing what to do next ---------------------------------------------------
+
+## Picks the next intent, weighted, and heads for it.
+func _pick_intent() -> void:
+	if intents.is_empty():
+		_has_target = false
+		return
+	var chosen: Dictionary = intents[0]
+	var total: float = 0.0
+	for entry: Variant in intents:
+		total += _weight_of(entry)
+	var roll: float = _rng.randf() * total
+	for entry: Variant in intents:
+		roll -= _weight_of(entry)
+		if roll <= 0.0:
+			chosen = entry
+			break
+	var spot: Vector2 = _spot_for(chosen)
+	if spot == Vector2.INF:
+		# The landmark is not in this level, so potter about instead of standing still.
+		chosen = {}
+		spot = _potter_spot(home_radius)
+	_target = spot
+	_next_linger = float(chosen.get("linger", 2.0))
+	_travel_left = travel_timeout
+	_has_target = true
+	_play_anim(&"walk")
+
+
+func _weight_of(entry: Variant) -> float:
+	if entry is Dictionary:
+		return maxf(0.001, float((entry as Dictionary).get("weight", 1.0)))
+	return 1.0
+
+
+## Where an intent wants the NPC to end up, or Vector2.INF if that cannot be resolved.
+func _spot_for(intent: Dictionary) -> Vector2:
+	var landmark: String = str(intent.get("landmark", ""))
+	if landmark.is_empty():
+		return _potter_spot(float(intent.get("roam", home_radius)))
+	var node: Node2D = _level_root().get_node_or_null(landmark) as Node2D
+	if node == null:
+		return Vector2.INF
+	# A landmark is the spot itself, so a Marker2D placed where the NPC should stand
+	# needs no arithmetic here.
+	return node.global_position.round()
+
+
+func _potter_spot(radius: float) -> Vector2:
+	var angle: float = _rng.randf() * TAU
+	return (_home + Vector2(cos(angle), sin(angle)) * (_rng.randf() * radius)).round()
+
+
+# --- Vision ---------------------------------------------------------------------
+#
+# Before every step the NPC looks where it is about to go: a short ray for anything
+# solid, and a glance at the ground for a village path. That is what keeps townsfolk out
+# of the trees, signs, buildings and the player, and walking the roads rather than
+# cutting across the lawns.
+
+## The heading to move along this step: straight at the target when the way is clear,
+## otherwise the clearest way round — and, among equally clear headings, the one that
+## leads along a path. Returns ZERO when every direction is blocked.
+func _choose_heading(to: Vector2) -> Vector2:
+	var want: Vector2 = to.normalized()
+	var best: Vector2 = Vector2.ZERO
+	var best_score: float = -INF
+	for i in STEER_STEPS:
+		var amount: float = float(i) / float(STEER_STEPS - 1)
+		var offset: float = deg_to_rad(-STEER_SPREAD + STEER_SPREAD * 2.0 * amount)
+		var dir: Vector2 = want.rotated(offset)
+		if _is_blocked(dir):
+			continue
+		var score: float = cos(offset)     # 1 straight ahead, less when turned away from it
+		if _leads_along_path(dir):
+			score += PATH_BONUS
+		if score > best_score:
+			best_score = score
+			best = dir
+	return best
+
+
+## True when something solid is within sight along `dir`. Cast from the NPC's feet,
+## where its collision box sits, so a low obstacle is still noticed — and the NPC's own
+## body is excluded, or it would see itself.
+func _is_blocked(dir: Vector2) -> bool:
+	var from: Vector2 = global_position + Vector2(0.0, 6.0)
+	var query := PhysicsRayQueryParameters2D.create(
+		from, from + dir * sight_distance, VISION_MASK)
+	query.exclude = [get_rid()]
+	return not get_world_2d().direct_space_state.intersect_ray(query).is_empty()
+
+
+## True when the ground a little way along `dir` is one of the village's path tiles.
+func _leads_along_path(dir: Vector2) -> bool:
+	var ground: TileMapLayer = _ground_layer()
+	if ground == null or path_tiles.is_empty():
+		return false
+	var point: Vector2 = global_position + dir * sight_distance
+	var cell: Vector2i = ground.local_to_map(ground.to_local(point))
+	if ground.get_cell_source_id(cell) != GROUND_SOURCE:
+		return false
+	return path_tiles.has(ground.get_cell_atlas_coords(cell))
+
+
+## The level's Ground tilemap, looked up once so paths can be told from grass.
+func _ground_layer() -> TileMapLayer:
+	if _ground == null or not is_instance_valid(_ground):
+		_ground = _level_root().get_node_or_null("Ground") as TileMapLayer
+	return _ground
+
+
+# --- Facing and animation -------------------------------------------------------
+
+## Turns to face where it is walking and plays the matching walk. Left is the
+## right-facing art flipped, matching the project's convention.
+func _face_where_it_walks(to: Vector2) -> void:
+	var axis: String = "down"
+	if absf(to.x) >= absf(to.y):
+		axis = "right"
+		animated_sprite.flip_h = to.x < 0.0
+	else:
+		axis = "down" if to.y > 0.0 else "up"
+		animated_sprite.flip_h = false
+	var anim: String = "walk" if axis == "down" else "walk_" + axis
+	_play_anim(StringName(anim))
+
+
+func _play_anim(anim: StringName, restart: bool = false) -> void:
+	if animated_sprite.sprite_frames == null:
+		return
+	if not animated_sprite.sprite_frames.has_animation(anim):
+		return
+	if not restart and animated_sprite.animation == anim and animated_sprite.is_playing():
+		return
+	animated_sprite.play(anim)
+
+
+## The level this NPC lives in: the topmost ancestor below the scene root, so landmark
+## names resolve against the level rather than the NPC's own scene.
+func _level_root() -> Node:
+	var node: Node = self
+	while node.get_parent() != null and node.get_parent() != get_tree().root:
+		node = node.get_parent()
+	return node

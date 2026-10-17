@@ -1,0 +1,185 @@
+[gd_scene format=4]
+
+[ext_resource type="Texture2D" uid="uid://c4a7q37eakoi8" path="res://assets/Tilesets/PocketVillageV1.1.1/Tilesets/Decor.png" id="1_decor"]
+
+[node name="NavariaTree" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Canopy" type="Node2D" parent="."]
+
+[node name="cell_15_17" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(32, 288, 16, 16)
+position = Vector2(0, -104)
+
+[node name="cell_13_18" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(0, 304, 16, 16)
+position = Vector2(-32, -88)
+
+[node name="cell_14_18" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(16, 304, 16, 16)
+position = Vector2(-16, -88)
+
+[node name="cell_15_18" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(32, 304, 16, 16)
+position = Vector2(0, -88)
+
+[node name="cell_16_18" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(48, 304, 16, 16)
+position = Vector2(16, -88)
+
+[node name="cell_13_19" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(0, 320, 16, 16)
+position = Vector2(-32, -72)
+
+[node name="cell_14_19" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(16, 320, 16, 16)
+position = Vector2(-16, -72)
+
+[node name="cell_15_19" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(32, 320, 16, 16)
+position = Vector2(0, -72)
+
+[node name="cell_16_19" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(48, 320, 16, 16)
+position = Vector2(16, -72)
+
+[node name="cell_17_19" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(64, 320, 16, 16)
+position = Vector2(32, -72)
+
+[node name="cell_13_20" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(0, 336, 16, 16)
+position = Vector2(-32, -56)
+
+[node name="cell_14_20" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(16, 336, 16, 16)
+position = Vector2(-16, -56)
+
+[node name="cell_15_20" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(32, 336, 16, 16)
+position = Vector2(0, -56)
+
+[node name="cell_16_20" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(48, 336, 16, 16)
+position = Vector2(16, -56)
+
+[node name="cell_17_20" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(64, 336, 16, 16)
+position = Vector2(32, -56)
+
+[node name="cell_13_21" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(0, 352, 16, 16)
+position = Vector2(-32, -40)
+
+[node name="cell_14_21" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(16, 352, 16, 16)
+position = Vector2(-16, -40)
+
+[node name="cell_15_21" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(32, 352, 16, 16)
+position = Vector2(0, -40)
+
+[node name="cell_16_21" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(48, 352, 16, 16)
+position = Vector2(16, -40)
+
+[node name="cell_17_21" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(64, 352, 16, 16)
+position = Vector2(32, -40)
+
+[node name="cell_13_22" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(0, 368, 16, 16)
+position = Vector2(-32, -24)
+
+[node name="cell_14_22" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(16, 368, 16, 16)
+position = Vector2(-16, -24)
+
+[node name="cell_15_22" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(32, 368, 16, 16)
+position = Vector2(0, -24)
+
+[node name="cell_16_22" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(48, 368, 16, 16)
+position = Vector2(16, -24)
+
+[node name="cell_17_22" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(64, 368, 16, 16)
+position = Vector2(32, -24)
+
+[node name="cell_14_23" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(16, 384, 16, 16)
+position = Vector2(-16, -8)
+
+[node name="cell_15_23" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(32, 384, 16, 16)
+position = Vector2(0, -8)
+
+[node name="cell_16_23" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(48, 384, 16, 16)
+position = Vector2(16, -8)
+
+[node name="cell_17_23" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(64, 384, 16, 16)
+position = Vector2(32, -8)
+
+
+position = Vector2(0, -4)

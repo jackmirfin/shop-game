@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ShopData" format=3]
+
+[ext_resource type="Script" path="res://scripts/shop_data.gd" id="1_x0j7x"]
+
+[resource]
+script = ExtResource("1_x0j7x")
+shop_name = "General Store"
+shopkeeper_name = "Martha"
+greeting_text = "Welcome to the General Store! Take a look around."
+farewell_text = "Thank you, come again!"
+stock_items = Array[Dictionary]([{
+"price_override": 30,
+"unique_id": "health_potion"
+}, {
+"price_override": -1,
+"unique_id": "bread"
+}, {
+"price_override": -1,
+"unique_id": "iron_sword"
+}, {
+"price_override": -1,
+"unique_id": "leather_armor"
+}, {
+"price_override": 15,
+"unique_id": "tea_leaf"
+}])
+sell_multiplier = 1.2
+buy_multiplier = 0.4

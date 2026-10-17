@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c5flb4ve5ru78"]
+
+[ext_resource type="PackedScene" uid="uid://box1sgrfl2jnv" path="res://card.tscn" id="1_yqxfr"]
+[ext_resource type="Resource" path="res://resources/cards/heavy_swing.tres" id="2_lrdyl"]
+[ext_resource type="Resource" path="res://resources/cards/focus.tres" id="3_lrdyl"]
+[ext_resource type="Resource" path="res://resources/cards/throw_stone.tres" id="4_1w0a7"]
+
+[node name="Control" type="Control" unique_id=1575785438]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1406064592]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CardSlot" type="Control" parent="HBoxContainer" unique_id=989039791]
+custom_minimum_size = Vector2(222, 294)
+layout_mode = 2
+
+[node name="Card" parent="HBoxContainer/CardSlot" unique_id=2016979740 instance=ExtResource("1_yqxfr")]
+propagate_maximum_size = true
+layout_mode = 0
+offset_left = -12.0
+offset_right = -12.0
+card_data = ExtResource("2_lrdyl")
+
+[node name="CardSlot1" type="Control" parent="HBoxContainer" unique_id=1992832443]
+custom_minimum_size = Vector2(222, 294)
+layout_mode = 2
+
+[node name="Card1" parent="HBoxContainer/CardSlot1" unique_id=2022293404 instance=ExtResource("1_yqxfr")]
+layout_mode = 0
+offset_left = 12.0
+offset_right = 12.0
+card_data = ExtResource("3_lrdyl")
+
+[node name="CardSlot2" type="Control" parent="HBoxContainer" unique_id=525286150]
+custom_minimum_size = Vector2(222, 294)
+layout_mode = 2
+
+[node name="Card2" parent="HBoxContainer/CardSlot2" unique_id=220412336 instance=ExtResource("1_yqxfr")]
+layout_mode = 0
+offset_left = 37.0
+offset_right = 37.0
+card_data = ExtResource("4_1w0a7")

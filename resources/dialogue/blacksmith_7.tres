@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueLineData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/dialogue_data.gd" id="1"]
+[resource]
+script = ExtResource("1")
+speaker_name = "BLACKSMITH"
+text = "Neither's much to look at, I'll admit. But good steel doesn't need to be pretty."
+next_id = "blacksmith_8"

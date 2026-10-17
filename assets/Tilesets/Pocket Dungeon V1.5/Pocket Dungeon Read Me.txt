@@ -1,0 +1,24 @@
+Pocket Dungeon – 16×16 Tileset - SebbySpoons on ItchIO
+
+A pixel-art dungeon tileset designed for quick prototypes and full game projects.
+
+Format
+
+PNG files
+
+16×16 grid
+
+Works in all major game engines
+
+Licensing
+
+Premium: Commercial & non-commercial use allowed. Editing allowed. No reselling or redistribution.
+
+Credits
+
+❤️ Character animation template by Erisesra
+https://erisesra.itch.io/character-templates-pack
+
+Updates
+
+Pocket Dungeon is an active project — new content drops will continue over time. Follow for updates.

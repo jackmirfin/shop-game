@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3]
+
+[ext_resource type="Script" uid="uid://y5t32hvqu8m3" path="res://scripts/card_data.gd" id="1_carddata"]
+[ext_resource type="Texture2D" uid="uid://dagwh5y4rwp7" path="res://assets/Cards/LongStick.png" id="2_art"]
+
+[resource]
+script = ExtResource("1_carddata")
+card_name = "Long Stick"
+artwork = ExtResource("2_art")
+description = "Deal 2 damage"
+energy_cost = 1
+damage = 2

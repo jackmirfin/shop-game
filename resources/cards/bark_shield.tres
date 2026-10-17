@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dajmk08a5d5w3"]
+
+[ext_resource type="Script" uid="uid://y5t32hvqu8m3" path="res://scripts/card_data.gd" id="1_carddata"]
+[ext_resource type="Texture2D" uid="uid://b1uqk3yox0qq6" path="res://assets/Cards/BarkShield.png" id="2_art"]
+
+[resource]
+script = ExtResource("1_carddata")
+card_name = "Bark Shield"
+artwork = ExtResource("2_art")
+description = "Gain 2 block"
+energy_cost = 1
+block = 2

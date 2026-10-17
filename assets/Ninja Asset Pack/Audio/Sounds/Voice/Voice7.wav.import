@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dga1rt5vu5n71"
+path="res://.godot/imported/Voice7.wav-4ff4b23ab5413ce7206c903c9e02e90b.sample"
+
+[deps]
+
+source_file="res://assets/Ninja Asset Pack/Audio/Sounds/Voice/Voice7.wav"
+dest_files=["res://.godot/imported/Voice7.wav-4ff4b23ab5413ce7206c903c9e02e90b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

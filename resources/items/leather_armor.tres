@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="1_6bpwm"]
+
+[resource]
+script = ExtResource("1_6bpwm")
+item_name = "Leather Armor"
+description = "Basic protective gear. +5 defense."
+item_type = 2
+value = 100
+max_stack = 1
+unique_id = "leather_armor"

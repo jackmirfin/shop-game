@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bapkk756mnjbm"
+path="res://.godot/imported/29 - Lament.ogg-e69f34362b36df5aaa237cef94ff6e16.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Ninja Asset Pack/Audio/Musics/29 - Lament.ogg"
+dest_files=["res://.godot/imported/29 - Lament.ogg-e69f34362b36df5aaa237cef94ff6e16.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

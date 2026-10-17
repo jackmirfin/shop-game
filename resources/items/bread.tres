@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="1_sbk18"]
+
+[resource]
+script = ExtResource("1_sbk18")
+item_name = "Bread"
+description = "Freshly baked bread. Restores 10 HP."
+item_type = 3
+value = 8
+stackable = true
+max_stack = 20
+unique_id = "bread"

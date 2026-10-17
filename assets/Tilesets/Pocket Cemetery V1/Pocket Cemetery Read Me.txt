@@ -1,0 +1,30 @@
+Pocket Cemetery – 16×16 Tileset - SebbySpoons on ItchIO
+
+A compact pixel-art village tileset designed for quick prototypes and full game projects.
+
+Format
+
+PNG files
+
+16×16 grid
+
+Works in all major game engines
+
+Licensing
+
+Commercial & non-commercial use allowed. Editing allowed. No reselling or redistribution.
+
+
+Credits
+please consider crediting me on your project - Sebbyspoons.itch.io.
+Be sure to leave a comment so I can play your game
+
+
+Updates
+
+Pocket Series is an active project — new content drops will continue over time. Follow for updates.
+
+Other 
+
+❤️ Character animation template by Erisesra
+https://erisesra.itch.io/character-templates-pack

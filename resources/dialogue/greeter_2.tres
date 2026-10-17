@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueLineData" load_steps=2 format=3 uid="uid://dialoguegreet2"]
+
+[ext_resource type="Script" path="res://scripts/dialogue_data.gd" id="1_dial"]
+
+[resource]
+script = ExtResource("1_dial")
+speaker_name = "Mira"
+text = "Your great grandfather's shop? Oh my, Eldric's grandchild! We've been wondering when someone would come. The old Emporium is just down the lane — the big building with the bay window."
+next_id = "greet_3"

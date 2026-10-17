@@ -1,0 +1,38 @@
+[gd_scene format=4 uid="uid://dlamposta1"]
+
+[ext_resource type="Texture2D" uid="uid://c4a7q37eakoi8" path="res://assets/Tilesets/PocketVillageV1.1.1/Tilesets/Decor.png" id="1_decor"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lamp_top"]
+atlas = ExtResource("1_decor")
+region = Rect2(240, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lamp_mid"]
+atlas = ExtResource("1_decor")
+region = Rect2(240, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lamp_bot"]
+atlas = ExtResource("1_decor")
+region = Rect2(240, 128, 16, 16)
+
+size = Vector2(14, 32)
+
+[node name="LampPost" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Top" type="Sprite2D" parent="Visuals"]
+position = Vector2(0, 0)
+texture = SubResource("AtlasTexture_lamp_top")
+
+[node name="Mid" type="Sprite2D" parent="Visuals"]
+position = Vector2(0, 16)
+texture = SubResource("AtlasTexture_lamp_mid")
+
+[node name="Bot" type="Sprite2D" parent="Visuals"]
+position = Vector2(0, 32)
+texture = SubResource("AtlasTexture_lamp_bot")
+
+position = Vector2(0, 24)
+
+position = Vector2(0, 0)

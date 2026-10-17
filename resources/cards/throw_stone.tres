@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" format=3]
+
+[ext_resource type="Script" uid="uid://y5t32hvqu8m3" path="res://scripts/card_data.gd" id="1_carddata"]
+[ext_resource type="Texture2D" uid="uid://c2hl120nq1ipq" path="res://assets/Cards/ThrowStone.png" id="2_art"]
+
+[resource]
+script = ExtResource("1_carddata")
+card_name = "Throw Stone"
+artwork = ExtResource("2_art")
+description = "Deal 2 damage.\nApply 1 Weak.\nConsume."
+energy_cost = 0
+damage = 2
+weak = 1
+consume = true
+consumes_item = "Stone"
+artwork_offset_x = -2

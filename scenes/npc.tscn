@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d31oj5725wliu"]
+
+[ext_resource type="Script" uid="uid://b6fgfyswayfad" path="res://scripts/npc.gd" id="1_script"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_npc"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_interact"]
+radius = 48.0
+
+[node name="NPC" type="CharacterBody2D" unique_id=1446221535]
+script = ExtResource("1_script")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=162819743]
+scale = Vector2(0.9, 0.9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=325259555]
+shape = SubResource("CircleShape2D_npc")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=571000080]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=430390729]
+shape = SubResource("CircleShape2D_interact")
+
+[node name="NameLabel" type="Label" parent="." unique_id=2082457115]
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = -15.0
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1

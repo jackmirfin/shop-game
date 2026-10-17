@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://c0duioyxbb4th"]
+
+[ext_resource type="Texture2D" uid="uid://p6sjohvdru4o" path="res://assets/Tilesets/floor-levers.png" id="1_8ja8b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vb3gc"]
+atlas = ExtResource("1_8ja8b")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oe2rt"]
+atlas = ExtResource("1_8ja8b")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ay3ws"]
+atlas = ExtResource("1_8ja8b")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0jrq"]
+atlas = ExtResource("1_8ja8b")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kt251"]
+atlas = ExtResource("1_8ja8b")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlsrd"]
+atlas = ExtResource("1_8ja8b")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eyauc"]
+atlas = ExtResource("1_8ja8b")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_13qdw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vb3gc")
+}],
+"loop": 1,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oe2rt")
+}],
+"loop": 1,
+"name": &"on",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ay3ws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0jrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kt251")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mlsrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eyauc")
+}],
+"loop": 0,
+"name": &"switching",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+radius = 17.0
+
+[node name="lever" type="AnimatedSprite2D" unique_id=179446956]
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_13qdw")
+animation = &"off"
+autoplay = "off"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=805020608]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1359700958]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_xrivr")

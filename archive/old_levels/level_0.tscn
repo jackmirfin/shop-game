@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0villagelvl0"]
+
+[ext_resource type="PackedScene" uid="uid://crwour1q463dk" path="res://scenes/Levels/base_level.tscn" id="1_base"]
+[ext_resource type="PackedScene" uid="uid://skelbag001" path="res://scenes/enemies/skeleton_bag.tscn" id="2_skelbag"]
+
+[node name="LevelRoot" instance=ExtResource("1_base")]
+
+[node name="SkeletonBag" parent="." instance=ExtResource("2_skelbag")]
+position = Vector2(350, 220)

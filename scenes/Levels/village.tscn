@@ -1,0 +1,257 @@
+[gd_scene format=3 uid="uid://dqoyf5xxyh7cx"]
+
+[ext_resource type="PackedScene" uid="uid://crwour1q463dk" path="res://scenes/Levels/base_level.tscn" id="1_base"]
+[ext_resource type="Script" uid="uid://b6fgfyswayfad" path="res://scripts/npc.gd" id="2_npc"]
+[ext_resource type="Script" uid="uid://dn0vbvadbjfom" path="res://scripts/locked_door.gd" id="3_door"]
+[ext_resource type="Texture2D" uid="uid://cfrg0p7lg7koc" path="res://assets/generated/npc_villager_woman_frame_0.png" id="4_tex_woman"]
+[ext_resource type="Texture2D" uid="uid://h4qoufl7omdf" path="res://assets/generated/npc_elder_man_frame_0.png" id="5_tex_elder"]
+[ext_resource type="Texture2D" uid="uid://8geswji4nplp" path="res://assets/generated/npc_adventurer_frame_0.png" id="6_tex_adv"]
+[ext_resource type="Texture2D" uid="uid://cp8ow6em1co26" path="res://assets/generated/npc_noble_frame_0.png" id="7_tex_noble"]
+[ext_resource type="Texture2D" uid="uid://bo8v10us20p52" path="res://assets/generated/prop_lantern_frame_0.png" id="8_tex_lantern"]
+[ext_resource type="Texture2D" uid="uid://4s02psaui7ks" path="res://assets/generated/prop_flower_box_frame_0.png" id="9_tex_flower"]
+
+[sub_resource type="RectangleShape2D" id="DoorShape"]
+size = Vector2(48, 64)
+
+[sub_resource type="CircleShape2D" id="NPCPhysShape"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="NPCInteractShape"]
+radius = 48.0
+
+[node name="VillageRoot" unique_id=1769937652 instance=ExtResource("1_base")]
+
+[node name="ShopDoor" type="Area2D" parent="." index="5" unique_id=960348547]
+position = Vector2(420, 130)
+script = ExtResource("3_door")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShopDoor" index="0" unique_id=194072850]
+shape = SubResource("DoorShape")
+
+[node name="PromptLabel" type="Label" parent="ShopDoor" index="1" unique_id=1854909456]
+offset_left = -90.0
+offset_top = -50.0
+offset_right = -90.0
+offset_bottom = -50.0
+text = "The Adventurer's Emporium"
+horizontal_alignment = 1
+
+[node name="VillageSign#SignLabel" type="Label" parent="." index="6" unique_id=286475556]
+z_index = 1
+offset_left = -40.0
+offset_top = -35.0
+offset_right = -40.0
+offset_bottom = -35.0
+scale = Vector2(0.5, 0.5)
+text = "Navaria"
+horizontal_alignment = 1
+
+[node name="Lantern2" type="Sprite2D" parent="." index="7" unique_id=837487018]
+z_index = 1
+position = Vector2(160, 90)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_tex_lantern")
+
+[node name="Lantern3" type="Sprite2D" parent="." index="8" unique_id=1984542072]
+z_index = 1
+position = Vector2(280, 95)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_tex_lantern")
+
+[node name="Lantern4" type="Sprite2D" parent="." index="9" unique_id=2030416164]
+z_index = 1
+position = Vector2(380, 100)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_tex_lantern")
+
+[node name="Lantern5" type="Sprite2D" parent="." index="10" unique_id=1565253760]
+z_index = 1
+position = Vector2(500, 100)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_tex_lantern")
+
+[node name="Lantern6" type="Sprite2D" parent="." index="11" unique_id=2069355191]
+z_index = 1
+position = Vector2(600, 105)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_tex_lantern")
+
+[node name="FlowerBox1" type="Sprite2D" parent="." index="12" unique_id=1173841931]
+z_index = 1
+position = Vector2(360, 145)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("9_tex_flower")
+
+[node name="FlowerBox2" type="Sprite2D" parent="." index="13" unique_id=1732809707]
+z_index = 1
+position = Vector2(480, 145)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("9_tex_flower")
+
+[node name="Mira" type="CharacterBody2D" parent="." index="14" unique_id=1700294818]
+z_index = 1
+position = Vector2(100, 100)
+collision_layer = 0
+script = ExtResource("2_npc")
+npc_name = "Mira"
+
+[node name="Sprite2D" type="Sprite2D" parent="Mira" index="0" unique_id=77739193]
+z_index = 1
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("4_tex_woman")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mira" index="1" unique_id=1846163147]
+shape = SubResource("NPCPhysShape")
+
+[node name="InteractionArea" type="Area2D" parent="Mira" index="2" unique_id=1145869085]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mira/InteractionArea" index="0" unique_id=1927619703]
+shape = SubResource("NPCInteractShape")
+
+[node name="NameLabel" type="Label" parent="Mira" index="3" unique_id=1196355080]
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = -7.0
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+
+[node name="OldThomas" type="CharacterBody2D" parent="." index="15" unique_id=2030163775]
+z_index = 1
+position = Vector2(200, 160)
+collision_layer = 0
+script = ExtResource("2_npc")
+npc_name = "Old Thomas"
+
+[node name="Sprite2D" type="Sprite2D" parent="OldThomas" index="0" unique_id=1850773896]
+z_index = 1
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_tex_elder")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OldThomas" index="1" unique_id=244307382]
+shape = SubResource("NPCPhysShape")
+
+[node name="InteractionArea" type="Area2D" parent="OldThomas" index="2" unique_id=1830928162]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OldThomas/InteractionArea" index="0" unique_id=1685089061]
+shape = SubResource("NPCInteractShape")
+
+[node name="NameLabel" type="Label" parent="OldThomas" index="3" unique_id=500044512]
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = -7.0
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+
+[node name="Garrett" type="CharacterBody2D" parent="." index="16" unique_id=785541112]
+z_index = 1
+position = Vector2(380, 140)
+collision_layer = 0
+script = ExtResource("2_npc")
+npc_name = "Garrett"
+
+[node name="Sprite2D" type="Sprite2D" parent="Garrett" index="0" unique_id=126159723]
+z_index = 1
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("6_tex_adv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Garrett" index="1" unique_id=738829735]
+shape = SubResource("NPCPhysShape")
+
+[node name="InteractionArea" type="Area2D" parent="Garrett" index="2" unique_id=510235136]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Garrett/InteractionArea" index="0" unique_id=1868525147]
+shape = SubResource("NPCInteractShape")
+
+[node name="NameLabel" type="Label" parent="Garrett" index="3" unique_id=1976777691]
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = -7.0
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+
+[node name="LadyEleanor" type="CharacterBody2D" parent="." index="17" unique_id=284317897]
+z_index = 1
+position = Vector2(520, 120)
+collision_layer = 0
+script = ExtResource("2_npc")
+npc_name = "Lady Eleanor"
+
+[node name="Sprite2D" type="Sprite2D" parent="LadyEleanor" index="0" unique_id=1493202248]
+z_index = 1
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("7_tex_noble")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadyEleanor" index="1" unique_id=2096874275]
+shape = SubResource("NPCPhysShape")
+
+[node name="InteractionArea" type="Area2D" parent="LadyEleanor" index="2" unique_id=1825287058]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadyEleanor/InteractionArea" index="0" unique_id=1000863259]
+shape = SubResource("NPCInteractShape")
+
+[node name="NameLabel" type="Label" parent="LadyEleanor" index="3" unique_id=1082795330]
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = -7.0
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+
+[node name="Pippa" type="CharacterBody2D" parent="." index="18" unique_id=57701157]
+z_index = 1
+position = Vector2(300, 180)
+collision_layer = 0
+script = ExtResource("2_npc")
+npc_name = "Pippa"
+
+[node name="Sprite2D" type="Sprite2D" parent="Pippa" index="0" unique_id=1785937817]
+z_index = 1
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("4_tex_woman")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pippa" index="1" unique_id=1376386326]
+shape = SubResource("NPCPhysShape")
+
+[node name="InteractionArea" type="Area2D" parent="Pippa" index="2" unique_id=1563021743]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pippa/InteractionArea" index="0" unique_id=1323196423]
+shape = SubResource("NPCInteractShape")
+
+[node name="NameLabel" type="Label" parent="Pippa" index="3" unique_id=355479540]
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = -7.0
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+
+[node name="Hugo" type="CharacterBody2D" parent="." index="19" unique_id=449287077]
+z_index = 1
+position = Vector2(580, 170)
+collision_layer = 0
+script = ExtResource("2_npc")
+npc_name = "Hugo"
+
+[node name="Sprite2D" type="Sprite2D" parent="Hugo" index="0" unique_id=277101692]
+z_index = 1
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_tex_elder")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hugo" index="1" unique_id=1768989040]
+shape = SubResource("NPCPhysShape")
+
+[node name="InteractionArea" type="Area2D" parent="Hugo" index="2" unique_id=1154032318]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hugo/InteractionArea" index="0" unique_id=760157]
+shape = SubResource("NPCInteractShape")
+
+[node name="NameLabel" type="Label" parent="Hugo" index="3" unique_id=645128667]
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = -7.0
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1

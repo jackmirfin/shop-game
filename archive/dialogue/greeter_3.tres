@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://dialoguegreet3"]
+
+[ext_resource type="Script" path="res://scripts/dialogue_data.gd" id="1_dial"]
+
+[resource]
+script = ExtResource("1_dial")
+speaker_name = "Mira"
+text = "Everyone here loved Eldric. He always had the most wonderful things in that shop. And his stories... oh, his stories! You'll fit right in, dear. If you need anything, just ask around. Navaria takes care of its own."
+next_id = "greet_4"

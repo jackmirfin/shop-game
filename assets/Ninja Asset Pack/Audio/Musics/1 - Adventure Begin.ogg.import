@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://deyqrt1ji4tpj"
+path="res://.godot/imported/1 - Adventure Begin.ogg-724f2a238557ef663dbae2d730b1a3c2.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Ninja Asset Pack/Audio/Musics/1 - Adventure Begin.ogg"
+dest_files=["res://.godot/imported/1 - Adventure Begin.ogg-724f2a238557ef663dbae2d730b1a3c2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

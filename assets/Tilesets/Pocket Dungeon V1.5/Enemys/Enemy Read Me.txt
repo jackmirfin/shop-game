@@ -1,0 +1,9 @@
+Skeletons and Zombies have all animations on one sprite sheet
+Total - 60 Horizontal Frames
+
+Idle - Down, Side, Up
+Run - Down, Side, Up
+Attack - Down, Side, Up
+Hurt - Down, Side, Up
+Death - Down, Side, Up
+

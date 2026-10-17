@@ -1,0 +1,390 @@
+[gd_scene format=4 uid="uid://dhousewooda1"]
+
+[ext_resource type="Texture2D" uid="uid://36ia2501hfnk" path="res://assets/Tilesets/PocketVillageV1.1.1/Tilesets/PreMade Buildings.png" id="1_tex"]
+
+[sub_resource type="AtlasTexture" id="Atlas_0"]
+atlas = ExtResource("1_tex")
+region = Rect2(400, 288, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_1"]
+atlas = ExtResource("1_tex")
+region = Rect2(416, 288, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_2"]
+atlas = ExtResource("1_tex")
+region = Rect2(432, 288, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_3"]
+atlas = ExtResource("1_tex")
+region = Rect2(448, 288, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_4"]
+atlas = ExtResource("1_tex")
+region = Rect2(464, 288, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_5"]
+atlas = ExtResource("1_tex")
+region = Rect2(480, 288, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_6"]
+atlas = ExtResource("1_tex")
+region = Rect2(496, 288, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_7"]
+atlas = ExtResource("1_tex")
+region = Rect2(400, 304, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_8"]
+atlas = ExtResource("1_tex")
+region = Rect2(416, 304, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_9"]
+atlas = ExtResource("1_tex")
+region = Rect2(432, 304, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_10"]
+atlas = ExtResource("1_tex")
+region = Rect2(448, 304, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_11"]
+atlas = ExtResource("1_tex")
+region = Rect2(464, 304, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_12"]
+atlas = ExtResource("1_tex")
+region = Rect2(480, 304, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_13"]
+atlas = ExtResource("1_tex")
+region = Rect2(496, 304, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_14"]
+atlas = ExtResource("1_tex")
+region = Rect2(400, 320, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_15"]
+atlas = ExtResource("1_tex")
+region = Rect2(416, 320, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_16"]
+atlas = ExtResource("1_tex")
+region = Rect2(432, 320, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_17"]
+atlas = ExtResource("1_tex")
+region = Rect2(448, 320, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_18"]
+atlas = ExtResource("1_tex")
+region = Rect2(464, 320, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_19"]
+atlas = ExtResource("1_tex")
+region = Rect2(480, 320, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_20"]
+atlas = ExtResource("1_tex")
+region = Rect2(496, 320, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_21"]
+atlas = ExtResource("1_tex")
+region = Rect2(400, 336, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_22"]
+atlas = ExtResource("1_tex")
+region = Rect2(416, 336, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_23"]
+atlas = ExtResource("1_tex")
+region = Rect2(432, 336, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_24"]
+atlas = ExtResource("1_tex")
+region = Rect2(448, 336, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_25"]
+atlas = ExtResource("1_tex")
+region = Rect2(464, 336, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_26"]
+atlas = ExtResource("1_tex")
+region = Rect2(480, 336, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_27"]
+atlas = ExtResource("1_tex")
+region = Rect2(496, 336, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_28"]
+atlas = ExtResource("1_tex")
+region = Rect2(416, 352, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_29"]
+atlas = ExtResource("1_tex")
+region = Rect2(432, 352, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_30"]
+atlas = ExtResource("1_tex")
+region = Rect2(448, 352, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_31"]
+atlas = ExtResource("1_tex")
+region = Rect2(464, 352, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_32"]
+atlas = ExtResource("1_tex")
+region = Rect2(480, 352, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_33"]
+atlas = ExtResource("1_tex")
+region = Rect2(416, 368, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_34"]
+atlas = ExtResource("1_tex")
+region = Rect2(432, 368, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_35"]
+atlas = ExtResource("1_tex")
+region = Rect2(448, 368, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_36"]
+atlas = ExtResource("1_tex")
+region = Rect2(464, 368, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_37"]
+atlas = ExtResource("1_tex")
+region = Rect2(480, 368, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_38"]
+atlas = ExtResource("1_tex")
+region = Rect2(416, 384, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_39"]
+atlas = ExtResource("1_tex")
+region = Rect2(432, 384, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_40"]
+atlas = ExtResource("1_tex")
+region = Rect2(464, 384, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_41"]
+atlas = ExtResource("1_tex")
+region = Rect2(480, 384, 16, 16)
+
+[node name="House" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="S_0" type="Sprite2D" parent="Visuals"]
+position = Vector2(-48, -96)
+texture = SubResource("Atlas_0")
+centered = false
+
+[node name="S_1" type="Sprite2D" parent="Visuals"]
+position = Vector2(-32, -96)
+texture = SubResource("Atlas_1")
+centered = false
+
+[node name="S_2" type="Sprite2D" parent="Visuals"]
+position = Vector2(-16, -96)
+texture = SubResource("Atlas_2")
+centered = false
+
+[node name="S_3" type="Sprite2D" parent="Visuals"]
+position = Vector2(0, -96)
+texture = SubResource("Atlas_3")
+centered = false
+
+[node name="S_4" type="Sprite2D" parent="Visuals"]
+position = Vector2(16, -96)
+texture = SubResource("Atlas_4")
+centered = false
+
+[node name="S_5" type="Sprite2D" parent="Visuals"]
+position = Vector2(32, -96)
+texture = SubResource("Atlas_5")
+centered = false
+
+[node name="S_6" type="Sprite2D" parent="Visuals"]
+position = Vector2(48, -96)
+texture = SubResource("Atlas_6")
+centered = false
+
+[node name="S_7" type="Sprite2D" parent="Visuals"]
+position = Vector2(-48, -80)
+texture = SubResource("Atlas_7")
+centered = false
+
+[node name="S_8" type="Sprite2D" parent="Visuals"]
+position = Vector2(-32, -80)
+texture = SubResource("Atlas_8")
+centered = false
+
+[node name="S_9" type="Sprite2D" parent="Visuals"]
+position = Vector2(-16, -80)
+texture = SubResource("Atlas_9")
+centered = false
+
+[node name="S_10" type="Sprite2D" parent="Visuals"]
+position = Vector2(0, -80)
+texture = SubResource("Atlas_10")
+centered = false
+
+[node name="S_11" type="Sprite2D" parent="Visuals"]
+position = Vector2(16, -80)
+texture = SubResource("Atlas_11")
+centered = false
+
+[node name="S_12" type="Sprite2D" parent="Visuals"]
+position = Vector2(32, -80)
+texture = SubResource("Atlas_12")
+centered = false
+
+[node name="S_13" type="Sprite2D" parent="Visuals"]
+position = Vector2(48, -80)
+texture = SubResource("Atlas_13")
+centered = false
+
+[node name="S_14" type="Sprite2D" parent="Visuals"]
+position = Vector2(-48, -64)
+texture = SubResource("Atlas_14")
+centered = false
+
+[node name="S_15" type="Sprite2D" parent="Visuals"]
+position = Vector2(-32, -64)
+texture = SubResource("Atlas_15")
+centered = false
+
+[node name="S_16" type="Sprite2D" parent="Visuals"]
+position = Vector2(-16, -64)
+texture = SubResource("Atlas_16")
+centered = false
+
+[node name="S_17" type="Sprite2D" parent="Visuals"]
+position = Vector2(0, -64)
+texture = SubResource("Atlas_17")
+centered = false
+
+[node name="S_18" type="Sprite2D" parent="Visuals"]
+position = Vector2(16, -64)
+texture = SubResource("Atlas_18")
+centered = false
+
+[node name="S_19" type="Sprite2D" parent="Visuals"]
+position = Vector2(32, -64)
+texture = SubResource("Atlas_19")
+centered = false
+
+[node name="S_20" type="Sprite2D" parent="Visuals"]
+position = Vector2(48, -64)
+texture = SubResource("Atlas_20")
+centered = false
+
+[node name="S_21" type="Sprite2D" parent="Visuals"]
+position = Vector2(-48, -48)
+texture = SubResource("Atlas_21")
+centered = false
+
+[node name="S_22" type="Sprite2D" parent="Visuals"]
+position = Vector2(-32, -48)
+texture = SubResource("Atlas_22")
+centered = false
+
+[node name="S_23" type="Sprite2D" parent="Visuals"]
+position = Vector2(-16, -48)
+texture = SubResource("Atlas_23")
+centered = false
+
+[node name="S_24" type="Sprite2D" parent="Visuals"]
+position = Vector2(0, -48)
+texture = SubResource("Atlas_24")
+centered = false
+
+[node name="S_25" type="Sprite2D" parent="Visuals"]
+position = Vector2(16, -48)
+texture = SubResource("Atlas_25")
+centered = false
+
+[node name="S_26" type="Sprite2D" parent="Visuals"]
+position = Vector2(32, -48)
+texture = SubResource("Atlas_26")
+centered = false
+
+[node name="S_27" type="Sprite2D" parent="Visuals"]
+position = Vector2(48, -48)
+texture = SubResource("Atlas_27")
+centered = false
+
+[node name="S_28" type="Sprite2D" parent="Visuals"]
+position = Vector2(-32, -32)
+texture = SubResource("Atlas_28")
+centered = false
+
+[node name="S_29" type="Sprite2D" parent="Visuals"]
+position = Vector2(-16, -32)
+texture = SubResource("Atlas_29")
+centered = false
+
+[node name="S_30" type="Sprite2D" parent="Visuals"]
+position = Vector2(0, -32)
+texture = SubResource("Atlas_30")
+centered = false
+
+[node name="S_31" type="Sprite2D" parent="Visuals"]
+position = Vector2(16, -32)
+texture = SubResource("Atlas_31")
+centered = false
+
+[node name="S_32" type="Sprite2D" parent="Visuals"]
+position = Vector2(32, -32)
+texture = SubResource("Atlas_32")
+centered = false
+
+[node name="S_33" type="Sprite2D" parent="Visuals"]
+position = Vector2(-32, -16)
+texture = SubResource("Atlas_33")
+centered = false
+
+[node name="S_34" type="Sprite2D" parent="Visuals"]
+position = Vector2(-16, -16)
+texture = SubResource("Atlas_34")
+centered = false
+
+[node name="S_35" type="Sprite2D" parent="Visuals"]
+position = Vector2(0, -16)
+texture = SubResource("Atlas_35")
+centered = false
+
+[node name="S_36" type="Sprite2D" parent="Visuals"]
+position = Vector2(16, -16)
+texture = SubResource("Atlas_36")
+centered = false
+
+[node name="S_37" type="Sprite2D" parent="Visuals"]
+position = Vector2(32, -16)
+texture = SubResource("Atlas_37")
+centered = false
+
+[node name="S_38" type="Sprite2D" parent="Visuals"]
+position = Vector2(-32, 0)
+texture = SubResource("Atlas_38")
+centered = false
+
+[node name="S_39" type="Sprite2D" parent="Visuals"]
+position = Vector2(-16, 0)
+texture = SubResource("Atlas_39")
+centered = false
+
+[node name="S_40" type="Sprite2D" parent="Visuals"]
+position = Vector2(16, 0)
+texture = SubResource("Atlas_40")
+centered = false
+
+[node name="S_41" type="Sprite2D" parent="Visuals"]
+position = Vector2(32, 0)
+texture = SubResource("Atlas_41")
+centered = false
+
+position = Vector2(-16, 0)
+
+position = Vector2(24, 0)

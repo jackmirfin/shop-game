@@ -1,0 +1,42 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://scripts/standard_chest.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/environment/chests/standard/chest_standard_full_open_00_closed.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/environment/chests/standard/chest_standard_full_open_01.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/environment/chests/standard/chest_standard_full_open_02.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/environment/chests/standard/chest_standard_full_open_03_open.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/environment/chests/standard/chest_standard_empty_open_00_closed.png" id="6"]
+[ext_resource type="Texture2D" path="res://assets/environment/chests/standard/chest_standard_empty_open_01.png" id="7"]
+[ext_resource type="Texture2D" path="res://assets/environment/chests/standard/chest_standard_empty_open_02_open.png" id="8"]
+
+[sub_resource type="SpriteFrames" id="frames"]
+animations = [{"frames":[{"duration":1.0,"texture":ExtResource("2")},{"duration":1.0,"texture":ExtResource("3")},{"duration":1.0,"texture":ExtResource("4")},{"duration":1.0,"texture":ExtResource("5")}],"loop":false,"name":&"open_full","speed":8.0},{"frames":[{"duration":1.0,"texture":ExtResource("6")},{"duration":1.0,"texture":ExtResource("7")},{"duration":1.0,"texture":ExtResource("8")}],"loop":false,"name":&"open_empty","speed":8.0}]
+
+[sub_resource type="RectangleShape2D" id="shape"]
+size = Vector2(18, 14)
+
+[sub_resource type="RectangleShape2D" id="body_shape"]
+size = Vector2(16, 10)
+
+[node name="StandardChest" type="Area2D"]
+script = ExtResource("1")
+collision_layer = 0
+collision_mask = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("frames")
+animation = &"open_full"
+frame = 0
+texture_filter = 1
+
+[node name="InteractionCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("shape")
+
+[node name="PhysicsBody" type="StaticBody2D" parent="."]
+collision_layer = 1
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsBody"]
+position = Vector2(0, 3)
+shape = SubResource("body_shape")

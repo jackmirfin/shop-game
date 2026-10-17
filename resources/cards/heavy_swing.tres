@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3]
+
+[ext_resource type="Script" uid="uid://y5t32hvqu8m3" path="res://scripts/card_data.gd" id="1_carddata"]
+[ext_resource type="Texture2D" uid="uid://g4s2fbc7geho" path="res://assets/Cards/LongStickHeavyAttack.png" id="2_art"]
+
+[resource]
+script = ExtResource("1_carddata")
+card_name = "Heavy Swing"
+artwork = ExtResource("2_art")
+description = "Deal 4 damage.\nApply 1 Weak."
+energy_cost = 2
+damage = 4
+weak = 1
+artwork_offset_x = -2

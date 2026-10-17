@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://clean_test_world"]
+
+[ext_resource type="PackedScene" uid="uid://d3v31k1lixtm2" path="res://scenes/Levels/level_1.tscn" id="1_forest"]
+[ext_resource type="PackedScene" uid="uid://chgu6obu5lw8c" path="res://scenes/player.tscn" id="2_player"]
+
+[node name="CleanTestWorld" type="Node2D"]
+
+[node name="Forest" parent="." instance=ExtResource("1_forest")]
+
+[node name="Player" parent="Forest/Entities" instance=ExtResource("2_player")]
+position = Vector2(690, -130)

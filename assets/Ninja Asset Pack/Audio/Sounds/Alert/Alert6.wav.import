@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b6nsjw1nvrblp"
+path="res://.godot/imported/Alert6.wav-23a21f4f5fe16bb2c326beeca0c12d55.sample"
+
+[deps]
+
+source_file="res://assets/Ninja Asset Pack/Audio/Sounds/Alert/Alert6.wav"
+dest_files=["res://.godot/imported/Alert6.wav-23a21f4f5fe16bb2c326beeca0c12d55.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

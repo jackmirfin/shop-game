@@ -1,0 +1,38 @@
+[gd_scene format=4 uid="uid://dlampostb1"]
+
+[ext_resource type="Texture2D" uid="uid://c4a7q37eakoi8" path="res://assets/Tilesets/PocketVillageV1.1.1/Tilesets/Decor.png" id="1_decor"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sign_left"]
+atlas = ExtResource("1_decor")
+region = Rect2(176, 368, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_post_left"]
+atlas = ExtResource("1_decor")
+region = Rect2(176, 384, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_post_right"]
+atlas = ExtResource("1_decor")
+region = Rect2(192, 384, 16, 16)
+
+size = Vector2(18, 24)
+
+[node name="SignPost" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="SignLeft" type="Sprite2D" parent="Visuals"]
+position = Vector2(0, 0)
+texture = SubResource("AtlasTexture_sign_left")
+
+[node name="PostLeft" type="Sprite2D" parent="Visuals"]
+position = Vector2(0, 16)
+texture = SubResource("AtlasTexture_post_left")
+
+[node name="PostRight" type="Sprite2D" parent="Visuals"]
+position = Vector2(16, 16)
+texture = SubResource("AtlasTexture_post_right")
+
+position = Vector2(8, 20)
+
+position = Vector2(0, 0)

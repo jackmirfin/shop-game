@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat_test_moth.gd" id="1_moth"]
+[ext_resource type="PackedScene" uid="uid://cyruw2012ncje" path="res://combat_test.tscn" id="2_combat"]
+[ext_resource type="Texture2D" path="res://assets/Combat/Moth.png" id="3_mothart"]
+
+[node name="CombatTestMoth" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_moth")
+
+[node name="CombatTest" parent="." instance=ExtResource("2_combat")]
+
+[node name="Enemy" parent="CombatTest"]
+position = Vector2(860, 463)
+scale = Vector2(8, 8)

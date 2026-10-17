@@ -1,0 +1,123 @@
+{
+	"animation_name": "walking_and_idle",
+	"animation_style": "walking_and_idle",
+	"animation_type": "",
+	"columns": 4,
+	"directions": [
+		"row_1",
+		"row_2",
+		"row_3",
+		"row_4"
+	],
+	"frame_count": 16,
+	"frame_height": 48,
+	"frame_paths": [],
+	"frame_regions": [
+		{
+			"h": 48,
+			"w": 48,
+			"x": 0,
+			"y": 0
+		},
+		{
+			"h": 48,
+			"w": 48,
+			"x": 48,
+			"y": 0
+		},
+		{
+			"h": 48,
+			"w": 48,
+			"x": 96,
+			"y": 0
+		},
+		{
+			"h": 48,
+			"w": 48,
+			"x": 144,
+			"y": 0
+		},
+		{
+			"h": 48,
+			"w": 48,
+			"x": 0,
+			"y": 48
+		},
+		{
+			"h": 48,
+			"w": 48,
+			"x": 48,
+			"y": 48
+		},
+		{
+			"h": 48,
+			"w": 48,
+			"x": 96,
+			"y": 48
+		},
+		{
+			"h": 48,
+			"w": 48,
+			"x": 144,
+			"y": 48
+		},
+		{
+			"h": 48,
+			"w": 48,
+			"x": 0,
+			"y": 96
+		},
+		{
+			"h": 48,
+			"w": 48,
+			"x": 48,
+			"y": 96
+		},
+		{
+			"h": 48,
+			"w": 48,
+			"x": 96,
+			"y": 96
+		},
+		{
+			"h": 48,
+			"w": 48,
+			"x": 144,
+			"y": 96
+		},
+		{
+			"h": 48,
+			"w": 48,
+			"x": 0,
+			"y": 144
+		},
+		{
+			"h": 48,
+			"w": 48,
+			"x": 48,
+			"y": 144
+		},
+		{
+			"h": 48,
+			"w": 48,
+			"x": 96,
+			"y": 144
+		},
+		{
+			"h": 48,
+			"w": 48,
+			"x": 144,
+			"y": 144
+		}
+	],
+	"frame_width": 48,
+	"name": "skeleton_enemy",
+	"prompt": "A pixel art skeleton warrior, 48x48, with visible bones and a tattered look. Side-view perspective for a 2D RPG. Dark medieval fantasy style with muted bone-white and grey colors. Simple readable silhouette.",
+	"rows": 4,
+	"source_image": "",
+	"source_tool": "generate_animation",
+	"spritesheet_height": 192,
+	"spritesheet_path": "res://assets/generated/skeleton_enemy.png",
+	"spritesheet_width": 192,
+	"type": "animation"
+}

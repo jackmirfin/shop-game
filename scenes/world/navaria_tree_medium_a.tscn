@@ -1,0 +1,83 @@
+[gd_scene format=4]
+
+[ext_resource type="Texture2D" uid="uid://c4a7q37eakoi8" path="res://assets/Tilesets/PocketVillageV1.1.1/Tilesets/Decor.png" id="1_decor"]
+
+[node name="NavariaTreeMedium" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Canopy" type="Node2D" parent="."]
+
+[node name="cell_0_0" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(80, 336, 16, 16)
+position = Vector2(-16, -56)
+
+[node name="cell_1_0" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(96, 336, 16, 16)
+position = Vector2(0, -56)
+
+[node name="cell_2_0" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(112, 336, 16, 16)
+position = Vector2(16, -56)
+
+[node name="cell_0_1" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(80, 352, 16, 16)
+position = Vector2(-16, -40)
+
+[node name="cell_1_1" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(96, 352, 16, 16)
+position = Vector2(0, -40)
+
+[node name="cell_2_1" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(112, 352, 16, 16)
+position = Vector2(16, -40)
+
+[node name="cell_0_2" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(80, 368, 16, 16)
+position = Vector2(-16, -24)
+
+[node name="cell_1_2" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(96, 368, 16, 16)
+position = Vector2(0, -24)
+
+[node name="cell_2_2" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(112, 368, 16, 16)
+position = Vector2(16, -24)
+
+[node name="cell_0_3" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(80, 384, 16, 16)
+position = Vector2(-16, -8)
+
+[node name="cell_1_3" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(96, 384, 16, 16)
+position = Vector2(0, -8)
+
+[node name="cell_2_3" type="Sprite2D" parent="Canopy"]
+texture = ExtResource("1_decor")
+region_enabled = true
+region_rect = Rect2(112, 384, 16, 16)
+position = Vector2(16, -8)
+
+
+position = Vector2(0, -3)

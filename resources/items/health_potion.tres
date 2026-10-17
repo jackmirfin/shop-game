@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="1_mr6qb"]
+
+[resource]
+script = ExtResource("1_mr6qb")
+item_name = "Health Potion"
+description = "Restores 30 HP. A warm, red liquid."
+item_type = 3
+value = 25
+stackable = true
+max_stack = 20
+unique_id = "health_potion"
